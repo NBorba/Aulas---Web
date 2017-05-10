@@ -1,0 +1,78 @@
+body {
+	background: white;
+	color: #000;
+}
+
+p{
+	margin-left: 4px;
+}
+
+h1{
+	color:#EBAC00;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+/* Container do conteúdo e da propaganda*/
+.container{
+	width:600px;
+}
+
+.conteudo{
+	width: 300px;
+	text-align: justify;
+	float:left;
+}
+
+div.propaganda{
+	background-color: #468AB3;
+	width:250px;
+	float:right;
+}
+
+.propaganda{
+	color:#fff;
+}
+
+.destaque{
+	font-size:20px;
+	color: #838383;
+	margin-top: -15px;
+}
+
+div.destaque{
+	width:200px;
+}
+
+.vermelho{
+	color: red;
+}
+
+.titulo{
+	font-size:18px;
+}
+
+.cinza{
+	color:#838383;
+}
+
+.justificado{
+	text-align: justify;
+}
+
+.centralizado{
+	text-align:center;
+}
+
+.maiusculo{
+	text-transform: uppercase;
+}
+
+.negrito{
+	font-weight: bold;
+}
+
+#outro{
+	font-size: 13px;
+	font-style: italic;
+}

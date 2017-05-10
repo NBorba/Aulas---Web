@@ -1,0 +1,63 @@
+body {
+	background: black;
+	color: #fff;
+}
+
+h1{
+	background: #EBAC00;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.conteudo{
+	width: 300px;
+	text-align: justify;
+	float:left;
+}
+
+.propaganda{
+	width:200px;
+	float:right;
+}
+
+#outro{
+	font-size: 12px;
+	font-style: italic;
+}
+
+.destaque{
+	font-size:22px;
+}
+
+div.destaque{
+	width:200px;
+}
+
+.vermelho{
+	color: red;
+}
+
+.titulo{
+	font-size:18px;
+}
+
+.cinza{
+	color:#838383;
+}
+
+.justificado{
+	text-align: justify;
+}
+
+.centralizado{
+	text-align:center;
+}
+
+.maiusculo{
+	text-transform: uppercase;
+}
+
+.negrito{
+	font-weight: bold;
+}
+
