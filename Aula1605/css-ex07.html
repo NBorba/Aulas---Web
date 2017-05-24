@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo seletores</title>
+
+	<style>
+	body {
+		/*
+		font-size: 12px;
+		line-height: 16px;
+		font-family: Arial;
+		*/
+		font: 12px/16px Arial;
+	}
+
+	table {
+		border-collapse: collapse;
+		margin: 20px;
+	}
+
+	td {
+		border: 1px solid #999;
+		padding: 4px;
+	}
+
+	th {
+		padding: 4px;
+	}
+
+	/* linhas ímpares */
+	table:nth-child(1) tr:nth-child(odd) {
+		background: #ccc;
+	}
+
+	/* linhas pares */
+	table:nth-child(1) tr:nth-child(even) {
+		background: #999;
+	}
+
+	/* oitava linha */
+	table:nth-child(1) tr:nth-child(8) {
+	    background: red !important;
+		color: #fff;
+	}
+
+	/* primeiro filho da oitava linha da primeira tabela */
+	table:nth-child(1) tr:nth-child(8) td:first-child {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	/* além do first-child, temos também last-child e only-child */
+	/* existem também first-of-type, last-of-type e only-of-type */
+
+	/* múltiplos de 3 */
+	table:nth-child(2) tr:nth-child(3n) {
+		background: blue;
+		color: white;
+	}
+
+	/* múltiplos de 3 + 2 (começa no segundo elemento) */
+	table:nth-child(2) tr:nth-child(4n+2) {
+		background: darkblue;
+		color: white;
+	}
+
+	table tr:hover {
+		background: #000 !important;
+		color: #fff;
+	}
+
+	table:nth-child(2) tr:first-child:hover {
+		background: transparent !important;
+		color: #000;
+	}
+	</style>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<th>Nome</th>
+			<th>E-mail</th>
+			<th>Telefone</th>
+		</tr>
+		<tr>
+			<td>
+				Fulano 1
+			</td>
+			<td>
+				fulano1@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 2
+			</td>
+			<td>
+				fulano2@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 3
+			</td>
+			<td>
+				fulano3@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 4
+			</td>
+			<td>
+				fulano4@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 5
+			</td>
+			<td>
+				fulano5@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 6
+			</td>
+			<td>
+				fulano6@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 7
+			</td>
+			<td>
+				fulano7@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 8
+			</td>
+			<td>
+				fulano8@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 9
+			</td>
+			<td>
+				fulano9@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 10
+			</td>
+			<td>
+				fulano10@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+	</table>
+	
+	<table>
+		<tr>
+			<th>Nome</th>
+			<th>E-mail</th>
+			<th>Telefone</th>
+		</tr>
+		<tr>
+			<td>
+				Fulano 1
+			</td>
+			<td>
+				fulano1@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 2
+			</td>
+			<td>
+				fulano2@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 3
+			</td>
+			<td>
+				fulano3@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 4
+			</td>
+			<td>
+				fulano4@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 5
+			</td>
+			<td>
+				fulano5@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 6
+			</td>
+			<td>
+				fulano6@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 7
+			</td>
+			<td>
+				fulano7@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 8
+			</td>
+			<td>
+				fulano8@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 9
+			</td>
+			<td>
+				fulano9@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fulano 10
+			</td>
+			<td>
+				fulano10@gmail.com
+			</td>
+			<td>
+				41 9999-9999
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

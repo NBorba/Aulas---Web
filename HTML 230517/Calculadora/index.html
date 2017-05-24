@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="scripts/calculadora.js"></script>
+</head>
+<body>
+	<div class="main">
+		<input type="number" id="resultado" class="visualizardados" disabled>
+
+		<label for="valor1" class="titulo1">Valor 1</label>
+		<input type="number" id="valor1" class="campo1" required>
+
+		<label for="valor2" class="titulo2">Valor 2</label>
+		<input type="number" id="valor2" class="campo2" required>
+		
+		<input type="button" value="+" onclick="calcular('+');">
+		<input type="button" value="-" onclick="calcular('-');">
+		<input type="button" value="*" onclick="calcular('*');">
+		<input type="button" value="/" onclick="calcular('/');">
+		<input type="button" value="c" onclick="limpar();">
+	</div>	
+</body>
+</html>

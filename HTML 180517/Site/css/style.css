@@ -1,0 +1,143 @@
+body {
+	margin: 0;
+	background: #000;
+}
+
+header {
+	background: #fff;
+	width: 100%;
+	height: 90px;
+	position: fixed;
+	z-index: 3;
+}
+
+.header {
+	background: #fff;
+	height: 90px;
+	position: relative;
+}
+
+.top {
+	bottom: 0;
+	height: 60px;
+	left: 0;
+	margin: auto;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1240px;
+}
+
+.logo {
+	background: url(../imagens/logo.jpg) no-repeat;
+	background-size: contain;
+	display: block;
+	float: left;
+	height: 50px;
+	text-decoration: none;
+	text-indent: -999px;
+	width: 50px;
+}
+
+nav { 
+	width: 650px;
+	float: right;
+	font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+nav li{
+	display: inline-block;
+}
+
+nav a{
+	color: #333;
+	display: inline-block;
+	padding-left: 50px;
+	padding-right: 30px;
+	text-decoration: none;
+	transform: translateY(50%);
+}
+
+nav a:hover{
+	color: #000;
+}
+
+.main {
+	background: url(../imagens/mainimage.jpg) no-repeat;
+	background-size: cover;
+	height: 662px;
+	width: 100%;
+	z-index: 1;
+}
+
+.fundopreto {
+	background: black;
+	width: 100%;
+	height: 662px;
+	opacity: 0.5;
+	position: absolute;
+}
+
+.boxmain {
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	transform: translateY(70%);
+	width: 400px;
+}
+
+.imagemmain {
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #FFF;
+	height: 0;
+	margin: 0 auto;
+	transform: rotate(90deg);
+	width: 0;
+	z-index: 3;	
+}
+
+.destaquemain {
+	font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	padding-top: 30px;
+	text-align: center;
+	z-index: 3;
+}
+
+.destaqueconteudo {
+	font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	z-index: 3;
+}
+
+.subconteudo {
+	color: #222;
+	font-size: 20px;
+	font-family: "Helvetica";
+	line-height: 40px;
+	padding-left: 200px;
+	padding-right: 200px;
+	z-index: 3;
+}
+
+.branco {
+	color: #FFF;
+}
+
+.cinzaescuro {
+	color: #333;
+}
+
+.conteudo {
+	width: 100%;
+	height: 400px;
+	background: #FFF;
+	position: relative;
+	padding-top: 30px;
+	text-align: center;
+}
+

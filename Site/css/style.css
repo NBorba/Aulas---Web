@@ -1,0 +1,306 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #900;
+	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+header {
+	background: #F5E7CA;
+}
+
+.topo{
+	width: 100%;
+	height: 130px;
+	background: #F5E7CA;
+	display: flex;
+}
+
+.invisivel {
+	width: 170px;
+	height: 130px;
+	opacity: 0.0;
+	font-size: 53px;
+}
+
+.logo_container {
+	width: 170px;
+	height: 130px;
+	background: url(../imagens/logo.jpg) no-repeat center;
+	background-size:cover;
+	float:left;
+}
+
+.textomarca {
+	color: #2A1900;
+	width: 400px;
+	height: auto;
+	padding-top:60px;
+	font-family: Helvetica;
+	font-weight: bold;
+	float:left;
+	text-transform: uppercase;
+}
+
+.busca{
+	width: 380px;
+	height: 129px;
+	float: left;
+    padding-top:48px 
+}
+.redesocial {
+	width: 60px;
+	height: 129px;
+	margin-left: 100px;
+	padding-top: 49px;
+}
+
+.redesocialimg {
+	width: 40px;
+	height: 40px;
+	background: url(../imagens/facebook.png) no-repeat;
+	background-size: contain;
+	float:left;
+	top: 50%;
+}
+
+#buscabox {   
+    border: 0px;
+    height: 40px;
+    width: 380px;
+    font-size: 13px;
+    font-family: 'trebuchet MS', arial, helvetica;
+    border-radius: 50px;
+    padding-left: 20px;
+}
+
+#buscabox:active {
+	outline: none;
+}
+
+nav {
+	background: #F49B08;
+	height: 40px;
+	position: relative;
+	padding-left: 35px;
+}
+
+nav ul {
+	height: 18px;
+	padding: 0;
+	margin:auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	color: #FFF;
+	padding: 0 15px; 
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #5C3800;
+}
+
+.container {
+	background: #fff;	
+	margin: 50px auto 25px;
+	width: 1140px;
+}
+
+.main {
+	float: left;
+	padding: 20px;
+	width: 695px;
+}
+
+.maincontato {
+	float:left;
+	padding: 20px;
+	width: 695px;
+	text-align: center;
+}
+
+.maincontato H2 {
+	margin-top: 0px;
+	color: #F49B08;
+}
+
+textarea {
+	width: 200px;
+	height: 100px;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.formcontato input {
+	padding-left: 4px;
+	border-radius: 5px;
+}
+
+.produto {
+	width: 695px;
+	height: 270px;
+	padding-top: 10px;
+	margin-left: 28px;
+}
+
+.produtocardapio {
+	width: 695px;
+	height: 65px;
+	padding-top: 10px;
+	margin-left: 28px;
+}
+
+.produto1img {
+	background: url(../imagens/produto1.png) no-repeat;
+	background-size: contain;
+	width: 60%;
+	height: 60%;
+	float: right;
+	margin: 25px -90px 0px 0px;
+	position: relative;
+}
+
+.tituloproduto {
+	color: #F49B08;
+	font-size: 30px;
+	font-family: Helvetica;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.topocardapio {
+	width: 695px;
+	height: 18px;
+}
+
+.titulocardapio {
+	float:left;
+	color: #F49B08;
+	font-size: 15px;
+	font-family: Helvetica;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-left: 2px;
+}
+
+.precocardapio {
+	color: #5C3800;
+	font-size: 15px;
+	font-family: Helvetica;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-right: 108px;
+	float:right;
+}
+
+p.tituloproduto {
+	margin: 0;
+}
+
+
+p.tituloproduto {
+	margin: 0;
+}
+
+.subtituloproduto {
+	color: #5C3800;
+	font-size: 18px;
+	font-family: Helvetica;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-left: 28px;
+}
+
+.conteudoproduto{
+	width: 50%;
+	max-width: 50%;
+	height: 50%;
+	max-height: 50%;
+	color: #5C3800;
+	float: left;
+	font-size: 16px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	padding: 25px 10px;
+	line-height: 25px;
+}
+
+.linha { 
+	background: #F3AA00;
+	width: 590px;
+	height: 2px;
+	margin-top: 5px;
+}
+
+.descricaoproduto {
+	height: 50px;
+	width: 590px;
+	color: #5C2B00;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	padding: 6px 0px 0px 2px;
+}
+
+.side {
+	background: #EAB706;
+	float: right;
+	padding: 20px;
+	width: 440px;
+	height: 310px;
+	text-align: center;
+}
+
+.tituloside{
+	color: #FFF;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.imgloja {
+	border: 10px solid #FFF;
+	background: url(../imagens/loja.jpg) no-repeat;
+	background-size: contain;
+	height: 206px;
+	width: 299px;
+	margin: 25px auto;
+	display: block;
+}
+
+footer {
+	background: #F5E7CA;
+	height: 50px;
+	clear: both;
+}
+
+.dadosfooter {
+	color: #2A1900;
+	width: 450px;
+	font-family: Helvetica;
+	font-weight: bold;
+	float:left;
+	padding: 18px 0px 0px 20px;
+	text-transform: uppercase;
+}
+
+.anofooter{
+	color: #2A1900;
+	width: 60px;
+	font-family: Helvetica;
+	font-weight: bold;
+	float:right;
+	padding: 18px 0px 0px 0px;
+}
+

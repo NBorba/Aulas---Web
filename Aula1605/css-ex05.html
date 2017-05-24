@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo elementos</title>
+
+	<style>
+	/* para todos os estados de link */
+	a {
+		color: red;
+		text-decoration: none;
+	}
+	
+	/* para mouse over*/
+	a:hover {
+		color: darkred;
+		text-decoration: underline;
+	}
+
+	/* links visitados */
+	a:visited {}
+
+	/* link ativado */
+	a:active {
+		color: #000;
+	}
+
+	/* links ativos com o teclado (TAB) */
+	a:focus {
+		color: blue;
+	}
+
+	h1 {
+		/* pode ser dashed ou dotted */
+		border-bottom: 2px solid red;
+	}
+
+	/* insere antes do h1 */
+	h1:before {
+		content: "// ";
+	}
+
+	/* insere depois do h1 */
+	h1:after {
+		content: url(http://maps.google.com/mapfiles/kml/pal3/icon55.png);
+	}
+
+	h2 {
+		display: inline-block;
+		position: relative;
+	}
+
+	h2:after {
+		background: #808080;
+		content: "";
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -25px;
+		top: 35px;
+		height: 3px;
+		width: 50px;
+	}
+
+	p {
+		padding-left: 20px;
+		position: relative;
+	}
+
+	p:before {
+		border-radius: 50%;
+		background: blue;
+		content: "";
+		height: 10px;
+		width: 10px;
+		float: left;
+		margin: 4px 0 0 -15px;
+	}
+
+	p:after {
+		content: "\2605";
+	}
+	</style>
+</head>
+<body>
+
+	<h1>Um título qualquer</h1>
+
+	<h2>Um subtítulo</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas recusandae, tempora blanditiis dolore vitae accusantium. Necessitatibus alias quo odit harum similique, reiciendis, maiores doloremque et, at odio aspernatur nesciunt, quas. <a href="https://www.utf8icons.com/">UTF-8 Icons</a></p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, debitis!</p>
+	
+</body>
+</html>
