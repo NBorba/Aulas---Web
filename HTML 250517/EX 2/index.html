@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+
+	<script src="scripts/jquery-3.2.1.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			//$("p").fadeIn(2000);
+			$("p").slideDown(2000);	
+
+			$("#botao").click(function() {
+				$("p").toggleClass("colorido").fadeOut(2000);
+			});
+		});
+	</script>
+
+	<style>
+		p {
+			display: none;
+		}
+
+		.colorido {
+			color: red;
+		}
+	</style>
+
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa vel nulla, cum sunt similique eum alias expedita commodi quod reprehenderit.</p>
+
+	<button id="botao">Clique aqui</button>
+</body>
+</html>

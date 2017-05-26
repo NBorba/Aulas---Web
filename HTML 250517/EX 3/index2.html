@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+
+	<script src="scripts/jquery-3.2.1.min.js"></script>
+
+	<style>
+		.quadrado {
+			background: red;
+			color:#fff;
+			font-size: 30px;
+			height: 100px;
+			line-height: 100px;
+			position:absolute;
+			text-align: center;
+			top: 50px;
+			width: 100px;
+		}
+	</style>
+
+	<script>
+		$(document).ready(function() {
+			var contador = 0;
+			$("#botao").click(function() { 
+				$(".quadrado").animate({
+					"left": "500px"
+				}, 500, "swing", function() {
+					$(this).animate({
+						"top": "300px"
+					}, 500, "swing", function() {
+							$(this).animate({
+								"left":"8px",
+								"top":"50px"
+							}, 500, "swing", function() {
+								contador += 1;
+								$(".quadrado").text(contador);
+							})
+					})
+				});
+			})
+		});
+	</script>
+</head>
+<body>
+	<div class="quadrado"></div>
+	<input id="botao" type="button" value="Clique aqui">
+</body>
+</html>
