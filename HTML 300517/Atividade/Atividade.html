@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Atividade</title>
+	
+	<script>document.documentElement.className = 'js';</script>
+	<script src="js/jquery-3.2.1.min.js"></script>	
+	<script src="js/jquery.parallax.js"></script>
+	<script src="js/acoes.js"></script>
+	
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<link rel="stylesheet" href="css/jquery.parallax.css" />
+
+	<style type="text/css">
+	body {
+		font:					12px Arial, sans-serif;
+		margin: 				0;
+	}
+	ul {
+        float:      			left;
+        margin:     			0 30px 30px;
+        padding:    			0;
+        width:  				300px;
+	}
+	li {
+        background:             #eee;
+        background-image:       -webkit-gradient(linear,left top,left bottom,from(#fdfdfd),to(#eee));
+        background-image:       -webkit-linear-gradient(#fdfdfd,#eee);
+        background-image:       -moz-linear-gradient(#fdfdfd,#eee);
+        background-image:       -ms-linear-gradient(#fdfdfd,#eee);
+        background-image:       -o-linear-gradient(#fdfdfd,#eee);
+        background-image:       linear-gradient(#fdfdfd,#eee);
+        border: 				1px solid #ccc;
+        border-top: 			1px solid #eee;
+        color:                  #444;
+        cursor: 				pointer;
+        font-weight:            bold;
+        list-style:             none;
+        padding:                5px;
+        text-shadow:            0 1px 1px #fff;
+	}
+	li:hover {
+        border:                 1px solid #999;
+        background:             #eee;
+	}
+
+	.circulo {
+        background:             #9a4545;
+        -webkit-border-radius:  50%;
+        -moz-border-radius:     50%;
+        border-radius:          50%;
+        height:                 200px;
+        position:               absolute;
+        right:                  30px;
+        top:                    230px;
+        width:                  200px;
+	}
+
+	.conteudo {
+		background: 			#f0f0f0;
+        float:      			left;
+        margin:     			0 30px 30px;
+		padding: 				10px;
+	}
+
+	.quadrado {
+        background:             #456f9a;
+        height:                 150px;
+        position:               absolute;
+        right:                  10px;
+        top:                    40px;
+        width:                  150px;
+	}
+
+	.triangulo {
+        position:               absolute;
+        right:                  200px;
+        top:                    20px;
+        width:          		0;
+        height:         		0;
+        border-left:    		50px solid transparent;
+        border-right:   		50px solid transparent;
+        border-bottom:  		80px solid #7d9a45;
+	}
+
+	.cor1 {
+		background: #172557;
+	}
+
+	.cor2 {
+		background: #303E73;
+	}
+
+	.cor3 {
+		background: #255C69;
+	}
+
+	.cor4 {
+		background: #442F74;
+	}
+
+	.cor5 {
+		background: #645092;
+	}
+
+	</style>
+	<style media="screen, projection">
+	#port {
+			background: rgb(47, 49, 52);
+			margin: 0px 0px;
+			overflow: hidden;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			visibility: hidden;
+		}
+	</style>
+</head>
+
+<body>
+
+	<ul>
+		<li class="botao1" id="btnTrocarCor">
+			Trocar cor de fundo da página
+		</li>
+		<li class="botao2" id="btnMostrarAlerta">
+			Mostrar alerta
+		</li>
+		<li class="botao3" id="btnAnimarCirculo">
+			Animar o círculo
+		</li>
+		<li class="botao4" id="btnAlterarTamanho">
+			Alterar o tamanho do quadrado
+		</li>
+		<li class="botao5" id="btnToggleVisibilidade">
+			Mostrar/esconder triângulo
+		</li>
+		<li class="botao6" id="btnAlterarTexto">
+			Altera o texto da div com duplo clique
+		</li>
+		<li class="botao7" id="btnMostraParallax">
+			Faça algo legal!!!
+		</li>
+	</ul>
+	
+
+	<div class="quadrado"></div>
+	<div class="circulo"></div>
+	<div class="triangulo"></div>
+	<div id="box" class="conteudo">Texto</div>
+
+	<div id="port">
+		<div class="parallax-layer quadrado cor1" style="width:140px; height:140px;"></div>
+		<div class="parallax-layer quadrado cor2" style="width:120px; height:120px;"></div>
+		<div class="parallax-layer quadrado cor3" style="width:80px; height:80px;"></div>
+		<div class="parallax-layer quadrado cor4" style="width:60px; height:60px;"></div>
+		<div class="parallax-layer quadrado cor5" style="width:40px; height:40px;"></div>
+		<div class="parallax-layer quadrado cor4" style="width:20px; height:20px;"></div>
+	</div>
+	
+</body></html>
