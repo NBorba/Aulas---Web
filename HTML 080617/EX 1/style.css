@@ -1,0 +1,19 @@
+body {
+		font-size: 100%;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0 0 32px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 640px;
+}
+
+@media (min-width: 800px) {
+	body {
+		font-size: 110%;
+	}
+}
