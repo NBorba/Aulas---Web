@@ -1,0 +1,219 @@
+body {
+	background: url(../images/fundo.jpg) no-repeat;
+	/*background-size: cover;*/
+	height: auto;
+	width: auto;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+}
+
+.fundo-preto {
+	width: 100%;
+	height: 1000px;
+	background: black;
+	background-size: contain;
+	opacity: 0.3;
+	z-index: 2;
+	position: absolute;
+}
+
+input {
+	z-index: 3;
+	position: absolute;
+	background: green;
+	color: white;
+	border: 0px;
+	border-radius: 3px;
+	margin-top: 1%;
+	margin-left: 1%;
+}
+
+/* Jogo */
+
+.boneco {
+	background: url(../images/sprite.webp) 0px -0px;
+	display: block;
+	height: 550px;
+	width: 330px;
+	overflow: hidden;
+	position: absolute;
+	top:  111px;
+	left: 552px;
+	z-index: 3;
+}
+
+.jaqueta {
+	background: url(../images/sprite.webp) 780px -20px;
+	display: block;
+	height: 180px;
+	width: 170px;
+	overflow: hidden;
+	position: absolute;
+	top: 40px;
+	left: 16px;
+	z-index: 3;
+}
+
+.mascara {
+	background: url(../images/sprite.webp) 550px -30px;
+	display: block;
+	height: 100px;
+	width: 80px;
+	overflow: hidden;
+	position: absolute;
+	top: 99px;
+	left: 326.5px;
+	z-index: 3;
+}
+
+.chapeu {
+	background: url(../images/sprite.webp) 385px -50px;
+	display: block;
+	height: 58px;
+	width: 70px;
+	overflow: hidden;
+	position: absolute;
+	top: 120px;
+	left: 940px;
+	z-index: 3;
+}
+
+.calca {
+	background: url(../images/sprite.webp) 460px -178px;
+	display: block;
+	height: 276px;
+	width: 130px;
+	overflow: hidden;
+	position: absolute;
+	top: 11px;
+	left: 1200px;
+	z-index: 3;
+}	
+
+.uniforme {
+	background: url(../images/uniforme.webp) 300px -85px;
+	display: block;
+	height: 470px;
+	width: 235px;
+	overflow: hidden;
+	position: absolute;
+	top: 291px;
+	left: 249px;
+	z-index: 3;
+}
+
+.arma {
+	background: url(../images/sprite.webp) 590px 900px;
+	display: block;
+	height: 70px;
+	width: 50px;
+	overflow: hidden;
+	position: absolute;
+	top: 491px;
+	left: 71px;
+	z-index: 3;
+}
+
+.mala {
+	background: url(../images/sprite.webp) 795px 960px;
+	display: block;
+	height: 85px;
+	width: 125px;
+	overflow: hidden;
+	position: absolute;
+	top: 690px;
+	left: 700px;
+	z-index: 3;
+}
+
+.peruca {
+	background: url(../images/sprite.webp) 755px 815px;
+	display: block;
+	height: 60px;
+	width: 60px;
+	overflow: hidden;
+	position: absolute;
+	top: 496px;
+	left: 900px;
+	z-index: 3;
+}
+
+/* MAPEAMENTOS DROPPABLE */ 
+.cabecaDroppable {
+	background: blue;
+	width: 65px;
+	height: 76px;
+	left: 670px;
+	top: 145px;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 3;
+}
+
+.corpoDroppable {
+	background: black;
+	width: 180px;
+	height: 140px;
+	left: 610px;
+	top: 221px;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 3;
+}
+
+.corpoDoisDroppable {
+	background: purple;
+	width: 101px;
+	height: 39px;
+	left: 649px;
+	top: 361px;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 3;
+}
+
+.maoDroppable {
+	background: red;
+	width: 40px;
+	height: 39px;
+	opacity: 0.5;
+	position: absolute;	
+	z-index: 3;
+}
+
+.maoUm {
+	left: 610px;
+	top: 361px;
+	z-index: 3;
+}
+
+.maoDois {
+	left: 750px;
+	top: 361px;
+	z-index: 3;
+}
+
+.calcaDroppable {
+	background: yellow;
+	width: 180px;
+	height: 180px;
+	left: 610px;
+	top: 400px;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 3;
+}
+
+.peDroppable {
+	background: green;
+	width: 180px;
+	height: 60px;
+	left: 618px;
+	top: 580px;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 3;
+}
+
+
