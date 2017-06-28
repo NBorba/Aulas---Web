@@ -1,0 +1,63 @@
+/* LAYOUT */
+body {
+	margin: 0; 
+	padding: 0;
+}
+
+.conteudo {
+	width: 100%;
+	height: 100%;
+}
+
+.container-fluid {
+	padding: 0px;
+}
+
+.caixa-destaque {
+	background: white;
+	height: 200px;
+}
+
+.banner {
+	height: 100%;
+	left: 0px;    
+    margin:0px;
+    padding: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;  
+    z-index: 1;
+}
+
+.overlay {
+	background: black;
+	left: 0px;
+    height: 100%;
+    margin: 0px;
+    opacity: 0.6;
+    padding: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;  
+    z-index: 2;
+}
+
+.em-cima {
+	position: relative;
+	z-index: 2;
+}
+
+/* CORES */
+.preto {
+	background: black;
+}
+
+/* AJUSTES GERAIS */ 
+.sem-ajuste {
+	padding: 0;
+	margin: 0;
+	padding-left: 0; 
+	padding-right: 0; 
+	margin-left: 0; 
+	margin-right: 0
+}
