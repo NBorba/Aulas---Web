@@ -7,7 +7,17 @@
 	
 	<!-- jQuery -->
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>  
+
+	<!-- Slider --> 
+	<script src="js/jquery.flexslider.js"></script>
+
+	<!-- Revelar com o scroll -->
+	<script src="js/scrollreveal.min.js"></script>
+
+	<!-- Botão de rolar para cima -->
+	<script src="js/easing.js"></script>
+    <script src="js/jquery.ui.totop.min.js"</script>
 
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
@@ -15,46 +25,294 @@
 
 	 <!-- Estilo da página -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
     
 	<!-- Video no background -->
     <script src="js/jquery.vide.min.js"></script>
+	
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/ui.totop.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen|Source+Sans+Pro:300" rel="stylesheet">
 
-	<title>Trabalho final</title>
+    <script>
+	    function alturaCaixaDestaque(){
+	  		var vh = $(window).height() - 139.82;
+	  		$(".caixa-destaque").css({"height": vh + "px"});
+		}
+
+		$(document).ready(function(){
+			//alturaCaixaDestaque();
+
+			$(".botao-destaque").click(function() {
+    			$('html,body').animate({
+        			scrollTop: $(".personagens-container").offset().top},
+        			2000, 'swing');
+			});
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			$('.flexslider').flexslider({
+    			animation: "slide"
+ 			 });
+
+			// Reveal
+			window.sr = ScrollReveal({ reset: false});
+
+			// Header Principal
+			sr.reveal('.logo', { duration: 2000});
+			sr.reveal('.titulo-destaque', { duration: 3000});
+			sr.reveal('.texto-destaque', { duration: 5000});
+			sr.reveal('.botao-destaque-wrapper', { duration: 7000});
+	      
+			// Personagens
+			sr.reveal('.titulo-conteudo', { duration: 2000});
+			sr.reveal('.wrapper-pablo', {duration: 4000});
+			sr.reveal('.wrapper-steve', {duration: 5000});
+			sr.reveal('.wrapper-javier', {duration: 6000});
+
+			// Série
+			sr.reveal('.titulo-serie', {duration: 2000});
+			sr.reveal('.subtitulo-serie', {duration: 4000});
+			sr.reveal('.descricao-serie', {duration: 4500});
+			sr.reveal('.slider', {duration: 4500});
+
+			// Localização
+			sr.reveal('.titulo-localizacao', {duration: 2000});
+			sr.reveal('.subtitulo-localizacao', {duration: 4000});
+			sr.reveal('.conteudo-localizacao', {duration: 4500});
+			sr.reveal('.mapa', {duration: 4500});
+
+			// Atualização 
+			sr.reveal('.titulo-atualizacao', {duration: 2000});
+			sr.reveal('.linha', {duration: 3000});
+			sr.reveal('.form-atualizacao', {duration: 4000});
+
+			// Rodapé
+			sr.reveal('.texto-rodape', {duration: 2000});
+			sr.reveal('.texto-redes', {duration: 3000});
+			sr.reveal('.facebook', {duration: 3500});
+			sr.reveal('.youtube', {duration: 4000});
+			sr.reveal('.twitter', {duration: 4500});
+		});
+    </script>
+
+	<title>Narcos</title>
 </head>
 <body>
 
-<div class="container-fluid">
-	<div class="em-cima">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="logo-container">
-					<div class="logo"></div>
+	<div class="absolute">
+		<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="logo-container">
+							<div class="logo"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="container-fluid">
-	<div class="row">
-		<!-- Fundo preto sobre o vídeo -->
-		<div class="overlay"></div>
-			<div class="banner col-md-12">
-				<!-- Vídeo do background -->
-				<div style="height: 100%; width: 100%;" data-vide-bg="video/background-video" data-vide-options="autoplay: true, loop: false, muted: true, resize: true, playbackRate: 1, position: 0% 0%"></div>
-			</div>
-	</div>
+	<div class="destaque-container">
+		<div class="destaque-banner">
+			<div class="destaque-overlay"></div>
+			<div style="height: 100%; width: 100%;" data-vide-bg="video/background-video" data-vide-options="autoplay: true, loop: false, muted: true, resize: true, playbackRate: 1, position: 0% 0%"></div>
+		</div>
 
-	<div class="em-cima">
-		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1">
-				<div class="caixa-destaque"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="caixa-destaque">
+						<p class="titulo-destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+						<p class="texto-destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem magnam itaque adipisci a unde doloremque eius rem consequuntur rerum iusto cumque quisquam nam dolorum consequatur iste officia laudantium, provident dolores expedita corrupti perspiciatis odit neque quos</p>
+							
+						<div class="botao-destaque-wrapper">
+							<div class="botao-destaque">
+								<i class="fa fa-chevron-down fa-2x"></i>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="content"></div>
+	<div class="personagens-container">
+		<div class="personagens-overlay"></div>
+		<div class="container">
+
+			<div class="em-cima">
+
+				<div class="row">
+					<div class="col-sm-12 titulo-conteudo">Conheça os <b>manda-chuvas</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="wrapper-pablo">
+							<div class="personagem pablo"></div>
+							<hr>
+							<div class="titulo-personagem">Pablo</div>
+							<div class="descricao-personagem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe modi, numquam quos suscipit unde iure obcaecati voluptatem ipsum autem qui. Eaque sed doloribus eveniet labore, animi repellat quis, voluptas incidunt.</div>
+
+							<div class="botao-personagem">Conheça mais</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="wrapper-steve">
+							<div class="personagem steve"></div>
+							<hr>
+							<div class="titulo-personagem">Steve</div>
+							<div class="descricao-personagem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut similique asperiores ab, accusamus sequi ipsam voluptates quisquam sed recusandae sunt?</div>
+
+							<div class="botao-personagem">Conheça mais</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="wrapper-javier">
+							<div class="personagem javier"></div>
+							<hr>
+							<div class="titulo-personagem">Javier</div>
+							<div class="descricao-personagem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed fugiat consequuntur qui delectus nemo consequatur voluptatem non expedita ducimus!</div>
+
+							<div class="botao-personagem">Conheça mais</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<div class="serie-container">
+		<div class="container-fluid">
+			<div class="em-cima">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-4">
+						<div class="titulo-serie">A série</div>
+
+						<div class="subtitulo-serie">Conheça um pouco mais</div>
+
+						<div class="descricao-serie">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quibusdam unde tempore ipsa natus doloremque, dolor aperiam voluptate. Tempora, iste, culpa? Eligendi tempore nemo, cum rerum. Consequatur nulla, perspiciatis corporis vitae nisi unde eos aspernatur aliquam error exercitationem aliquid dolore!</p>
+							
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae natus ratione fuga similique placeat corporis!</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam pariatur hic architecto, error alias?</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolor quod ducimus, optio beatae facere porro iste atque sapiente minima? Tempore saepe nisi voluptatem dolor suscipit voluptatibus vel iste quod animi odio vitae similique, illo quibusdam. Tempora pariatur blanditiis tempore.</p>
+
+						</div>
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<div class="slider">
+							<div class="flexslider">
+							  <ul class="slides">
+							    <li>
+							      <img src="images/medellin-1.jpg"/>
+							    </li>
+							    <li>
+							      <img src="images/medellin-2.jpg"/>
+							    </li>
+							    <li>
+							      <img src="images/medellin-3.jpg"/>
+							    </li>
+							    <li>
+							      <img src="images/medellin-4.jpg"/>
+							    </li>
+							  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="localizacao-container">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="em-cima">
+					<div class="col-md-offset-1 col-md-5">
+						<div class="titulo-localizacao">Onde se passa?</div>
+						<div class="subtitulo-localizacao">Medellín - Colombia</div>
+						<div class="conteudo-localizacao">
+						<p>Habitantes: 2,464 milhões</p>
+						<p>O vale onde está localizado Medellin (Vale de Aburrá) foi habitada pelos povos indígenas desde o quinto século a.C. aproximadamente; foi visto pelos espanhóis em agosto de 1541.
+
+	Entre 1630 e 1650, começou a população por parte dos primeiros espanhóis e novos imigrantes. E a cidade foi fundada em 1675</p>
+						</div>
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<div class="mapa">
+							<div class="google-maps">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63458.35960863912!2d-75.61623103723343!3d6.244287615847748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2zTWVkZWzDrW4sIEFudGlvcXVpYSwgQ29sw7RtYmlh!5e0!3m2!1spt-BR!2sbr!4v1499013959851" width="600" height="450" frameborder="0" style="border: 5px solid darkred" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="atualizacao-container">
+		<div class="atualizacao-banner">
+			<div class="atualizacao-overlay"></div>
+			<div style="height: 100%; width: 100%;" data-vide-bg="video/atualizacao-video" data-vide-options="autoplay: true, loop: true, muted: true, resize: true, playbackRate: 1, position: 0% 0%"></div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="em-cima">
+				<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="titulo-atualizacao">
+								Gostaria de receber novidades sobre <span style="color: #AE1818">NARCOS?</span>
+							</div>
+
+							<div class="linha">
+								<hr>
+							</div>
+							
+
+							<div class="form-atualizacao">
+								<form action="#">
+									<input type="text" placeholder="Nome:" required>
+									<input type="email" placeholder="E-mail:" required>
+
+									<button type="submit" value="Enviar">Enviar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<footer>
+				<div class="row">
+					<div class="rodape">
+						<div class="col-md-4">
+							<div class="texto-rodape">© Narcos 2016</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="texto-redes">Redes sociais</div>
+							<div class="redes-sociais">
+								<div class="facebook"></div>
+								<div class="twitter"></div>
+								<div class="youtube"></div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="texto-rodape">Lorem ipsum dolor sit amet.</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+</div>
 
 </body>
 </html>
