@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
+	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+	
 	<!-- jQuery -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>  
@@ -116,7 +118,7 @@
 
 		$('.flexslider').flexslider({
 			animation: "slide"
-			 });
+	    });
 
 		// Reveal
 		window.sr = ScrollReveal({ reset: false});
@@ -130,7 +132,7 @@
 
 		// Header Principal
 		sr.reveal('.logo', { duration: 2000});
-		sr.reveal('.titulo-destaque', { duration: 3000});
+		sr.reveal('.titulo-destaque', { duration: 3500});
 		sr.reveal('.texto-destaque', { duration: 5000});
 		sr.reveal('.botao-destaque-wrapper', { duration: 7000});
       
@@ -197,7 +199,7 @@
 						    <!-- Collect the nav links, forms, and other content for toggling -->
 						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						      <ul class="nav navbar-nav">
-						        <li id="#li-home" class="section-destaque" class="active"><a class="botao-scroll-home" href="#">Home <span class="sr-only">(current)</span></a></li>
+						        <li id="#li-home" class="section-destaque active"><a class="botao-scroll-home" href="#">Home <span class="sr-only">(current)</span></a></li>
 						        <li id="#li-personagens" class="section-personagens"><a class="botao-scroll-personagens" href="#">Personagens</a></li>
 						        <li id="#li-serie" class="section-serie"><a class="botao-scroll-serie" href="#">A série</a></li>
 						        <li id="#li-onde" class="section-onde"><a class="botao-scroll-onde" href="#">Onde se passa?</a></li>
@@ -216,7 +218,7 @@
 	<div class="destaque-container">
 		<div class="destaque-banner">
 			<div class="destaque-overlay"></div>
-			<div style="height: 100%; width: 100%;" data-vide-bg="video/background-video" data-vide-options="autoplay: true, loop: false, muted: true, resize: true, playbackRate: 1, position: 0% 0%"></div>
+			<div style="height: 100%; width: 100%;" data-vide-bg="video/background-video" data-vide-options="autoplay: true, loop: true, muted: true, resize: true, playbackRate: 1, position: 0% 0%"></div>
 
 			<div class="botao-destaque-wrapper">
 				<div class="botao-destaque">

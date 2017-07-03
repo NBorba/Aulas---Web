@@ -613,9 +613,9 @@ button:hover{
 }
 
 .fixed {
-	background-color: #fff;
+	background-color: #FFF;
 	position: fixed;
-	top: 20px;
+	top: 10px;
 }
 
 .sem-ajuste {
