@@ -537,7 +537,7 @@ button:hover{
 /* RODAPE */
 .footer {
     bottom: 0;
-    height: auto;
+    height: 70px;
     position: absolute;
     width: 100%;
     z-index: 4;
