@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- jQuery -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>  
+
+	<script src="js/jquery.slicknav.min.js"></script>
+	<link rel="stylesheet" href="css/slicknav.css">
 
 	<!-- Slider --> 
 	<script src="js/jquery.flexslider.js"></script>
@@ -16,15 +19,11 @@
 	<script src="js/scrollreveal.min.js"></script>
 
 	<!-- Botão de rolar para cima -->
-	<script src="js/easing.js"></script>
     <script src="js/jquery.ui.totop.min.js"</script>
+	<script src="js/easing.js"></script>
 
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	 <!-- Estilo da página -->
-	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -32,83 +31,182 @@
 	<!-- Video no background -->
     <script src="js/jquery.vide.min.js"></script>
 	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	 <!-- Estilo da página -->
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/flexslider.css">
 	<link rel="stylesheet" href="css/ui.totop.css">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Source+Sans+Pro:300" rel="stylesheet">
 
     <script>
-	    function alturaCaixaDestaque(){
-	  		var vh = $(window).height() - 139.82;
-	  		$(".caixa-destaque").css({"height": vh + "px"});
-		}
+	$(document).ready(function() {
 
-		$(document).ready(function(){
-			//alturaCaixaDestaque();
+		num = $('.navbar').offset().top;
 
-			$(".botao-destaque").click(function() {
-    			$('html,body').animate({
-        			scrollTop: $(".personagens-container").offset().top},
-        			2000, 'swing');
-			});
+		$(window).bind('scroll', function() {
+	        if ($(window).scrollTop() > num) {
+	            $('.navbar').addClass('fixed');
+	         } else {
+		        num = $('.navbar').offset().top;
+		        $('.navbar').removeClass('fixed');
+		     }
+    	});
 
-			$().UItoTop({ easingType: 'easeOutQuart' });
+		/* Muda o item ativo do menu baseado no container ativo*/
+    	var sections = $('section')
+		    , nav = $('.navbar')
+		    , nav_height = nav.outerHeight();
+		   
+		  $(window).on('scroll', function () {
+		    var cur_pos = $(this).scrollTop();
+		   
+		    sections.each(function() {
+		      var top = $(this).offset().top - nav_height,
+		          bottom = top + $(this).outerHeight();
+		   
+		      if (cur_pos >= top && cur_pos <= bottom) {
+		        nav.find('li').removeClass('active');
+		        sections.removeClass('active');
+		   
+		        $(this).addClass('active');
+		        nav.find('li[class="'+$(this).attr('id')+'"]').addClass('active');
+		      }
+		    });
+		  });
 
-			$('.flexslider').flexslider({
-    			animation: "slide"
- 			 });
-
-			// Reveal
-			window.sr = ScrollReveal({ reset: false});
-
-			// Header Principal
-			sr.reveal('.logo', { duration: 2000});
-			sr.reveal('.titulo-destaque', { duration: 3000});
-			sr.reveal('.texto-destaque', { duration: 5000});
-			sr.reveal('.botao-destaque-wrapper', { duration: 7000});
-	      
-			// Personagens
-			sr.reveal('.titulo-conteudo', { duration: 2000});
-			sr.reveal('.wrapper-pablo', {duration: 4000});
-			sr.reveal('.wrapper-steve', {duration: 5000});
-			sr.reveal('.wrapper-javier', {duration: 6000});
-
-			// Série
-			sr.reveal('.titulo-serie', {duration: 2000});
-			sr.reveal('.subtitulo-serie', {duration: 4000});
-			sr.reveal('.descricao-serie', {duration: 4500});
-			sr.reveal('.slider', {duration: 4500});
-
-			// Localização
-			sr.reveal('.titulo-localizacao', {duration: 2000});
-			sr.reveal('.subtitulo-localizacao', {duration: 4000});
-			sr.reveal('.conteudo-localizacao', {duration: 4500});
-			sr.reveal('.mapa', {duration: 4500});
-
-			// Atualização 
-			sr.reveal('.titulo-atualizacao', {duration: 2000});
-			sr.reveal('.linha', {duration: 3000});
-			sr.reveal('.form-atualizacao', {duration: 4000});
-
-			// Rodapé
-			sr.reveal('.texto-rodape', {duration: 2000});
-			sr.reveal('.texto-redes', {duration: 3000});
-			sr.reveal('.facebook', {duration: 3500});
-			sr.reveal('.youtube', {duration: 4000});
-			sr.reveal('.twitter', {duration: 4500});
+		/* Se move para o container definido*/
+		$(".botao-destaque").click(function() {
+			$('html,body').animate({
+    			scrollTop: $(".personagens-container").offset().top},
+    			2000, 'swing');
 		});
+
+		$(".botao-scroll-home").click(function() {
+			$('html,body').animate({
+    			scrollTop: $(".destaque-container").offset().top},
+    			2000, 'swing');
+		});
+
+		$(".botao-scroll-personagens").click(function() {
+			$('html,body').animate({
+    			scrollTop: $(".personagens-container").offset().top},
+    			2000, 'swing');
+		});
+
+		$(".botao-scroll-serie").click(function() {
+			$('html,body').animate({
+    			scrollTop: $(".serie-container").offset().top},
+    			2000, 'swing');
+		});
+
+		$(".botao-scroll-onde").click(function() {
+			$('html,body').animate({
+    			scrollTop: $(".localizacao-container").offset().top},
+    			2000, 'swing');
+		});
+
+		$(".botao-scroll-novidades").click(function() {
+			$('html,body').animate({
+    			scrollTop: $(".atualizacao-container").offset().top},
+    			2000, 'swing');
+		});
+
+		$().UItoTop({ easingType: 'easeOutQuart' });
+
+		$('.flexslider').flexslider({
+			animation: "slide"
+			 });
+
+		// Reveal
+		window.sr = ScrollReveal({ reset: false});
+
+		sr.reveal('.navbar', {duration: 2500});
+		sr.reveal('#li-home', {duration: 2800});
+		sr.reveal('#li-personagens', {duration: 3100});
+		sr.reveal('#li-serie', {duration: 3400});
+		sr.reveal('#li-onde', {duration: 3700});
+		sr.reveal('#li-novidades', {duration: 4000});
+
+		// Header Principal
+		sr.reveal('.logo', { duration: 2000});
+		sr.reveal('.titulo-destaque', { duration: 3000});
+		sr.reveal('.texto-destaque', { duration: 5000});
+		sr.reveal('.botao-destaque-wrapper', { duration: 7000});
+      
+		// Personagens
+		sr.reveal('.titulo-conteudo', { duration: 2000});
+		sr.reveal('.wrapper-pablo', {duration: 4000});
+		sr.reveal('.wrapper-steve', {duration: 5000});
+		sr.reveal('.wrapper-javier', {duration: 6000});
+
+		// Série
+		sr.reveal('.titulo-serie', {duration: 2000});
+		sr.reveal('.subtitulo-serie', {duration: 4000});
+		sr.reveal('.descricao-serie', {duration: 4500});
+		sr.reveal('.slider', {duration: 4500});
+
+		// Localização
+		sr.reveal('.titulo-localizacao', {duration: 2000});
+		sr.reveal('.subtitulo-localizacao', {duration: 4000});
+		sr.reveal('.conteudo-localizacao', {duration: 4500});
+		sr.reveal('.mapa', {duration: 4500});
+
+		// Atualização 
+		sr.reveal('.titulo-atualizacao', {duration: 2000});
+		sr.reveal('.linha', {duration: 3000});
+		sr.reveal('.form-atualizacao', {duration: 4000});
+
+		// Rodapé
+		sr.reveal('.texto-rodape', {duration: 2000});
+		sr.reveal('.texto-redes', {duration: 3000});
+		sr.reveal('.facebook', {duration: 3500});
+		sr.reveal('.youtube', {duration: 4000});
+		sr.reveal('.twitter', {duration: 4500});
+	});
     </script>
 
 	<title>Narcos</title>
 </head>
 <body>
 
-	<div class="absolute">
-		<div class="container-fluid">
+<div class="sections">
+<section id="section-destaque">
+	<div class="em-cima-nav">
+		<div class="navegacao-container">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-12">
-						<div class="logo-container">
-							<div class="logo"></div>
-						</div>
+					<div class="col-xs-3">
+						<div class="logo"></div>
+					</div>
+						
+					<div class="em-cima-nav">	
+					<div class="col-xs-offset-4 col-xs-4">
+						<nav class="navbar navbar-default">
+						  <div class="container-fluid">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						    </div>
+
+						    <!-- Collect the nav links, forms, and other content for toggling -->
+						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						      <ul class="nav navbar-nav">
+						        <li id="#li-home" class="section-destaque" class="active"><a class="botao-scroll-home" href="#">Home <span class="sr-only">(current)</span></a></li>
+						        <li id="#li-personagens" class="section-personagens"><a class="botao-scroll-personagens" href="#">Personagens</a></li>
+						        <li id="#li-serie" class="section-serie"><a class="botao-scroll-serie" href="#">A série</a></li>
+						        <li id="#li-onde" class="section-onde"><a class="botao-scroll-onde" href="#">Onde se passa?</a></li>
+						        <li id="#li-novidades" class="section-novidades"><a class="botao-scroll-novidades" href="#">Novidades</a></li>   
+						      </ul>
+						    </div><!-- /.navbar-collapse -->
+						  </div><!-- /.container-fluid -->
+						</nav>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -119,6 +217,12 @@
 		<div class="destaque-banner">
 			<div class="destaque-overlay"></div>
 			<div style="height: 100%; width: 100%;" data-vide-bg="video/background-video" data-vide-options="autoplay: true, loop: false, muted: true, resize: true, playbackRate: 1, position: 0% 0%"></div>
+
+			<div class="botao-destaque-wrapper">
+				<div class="botao-destaque">
+					<i class="fa fa-chevron-down fa-2x"></i>
+				</div>
+			</div>
 		</div>
 
 		<div class="container-fluid">
@@ -128,16 +232,14 @@
 						<p class="titulo-destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 						<p class="texto-destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem magnam itaque adipisci a unde doloremque eius rem consequuntur rerum iusto cumque quisquam nam dolorum consequatur iste officia laudantium, provident dolores expedita corrupti perspiciatis odit neque quos</p>
 							
-						<div class="botao-destaque-wrapper">
-							<div class="botao-destaque">
-								<i class="fa fa-chevron-down fa-2x"></i>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</section>
+
+<section id="section-personagens">
 
 	<div class="personagens-container">
 		<div class="personagens-overlay"></div>
@@ -186,6 +288,10 @@
 		</div>
 	</div>
 
+</section>
+
+<section id="section-serie">
+
 	<div class="serie-container">
 		<div class="container-fluid">
 			<div class="em-cima">
@@ -231,6 +337,10 @@
 		</div>
 	</div>
 
+</section>
+
+<section id="section-onde">
+
 	<div class="localizacao-container">
 		<div class="container-fluid">
 			<div class="row">
@@ -256,6 +366,10 @@
 			</div>
 		</div>
 	</div>
+
+</section>
+
+<section id="section-novidades">
 
 	<div class="atualizacao-container">
 		<div class="atualizacao-banner">
@@ -287,11 +401,12 @@
 						</div>
 					</div>
 				</div>
+		</div>
 
-			<footer>
-				<div class="row">
-					<div class="rodape">
-						<div class="col-md-4">
+		<footer class="footer">
+				<div class="container-fluid">
+      				<div class="row">
+      					<div class="col-md-4">
 							<div class="texto-rodape">© Narcos 2016</div>
 						</div>
 
@@ -306,12 +421,14 @@
 						<div class="col-md-4">
 							<div class="texto-rodape">Lorem ipsum dolor sit amet.</div>
 						</div>
-					</div>
-				</div>
+      				</div>
+      			</div>
 			</footer>
-		</div>
 	</div>
 
+</section>
+
+</div>
 </div>
 
 </body>
