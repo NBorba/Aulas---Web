@@ -59,7 +59,13 @@ hr {
     color: red;
     font-family: 'Oxygen', serif;
     font-weight: bold;
-    padding: 0 14px;
+    padding: 0 50px;
+    text-align:center;
+}
+
+.navbar-center{
+   display: inline-block;
+   float: none; 
 }
 
 @media (max-width: 768px) {
@@ -69,17 +75,21 @@ hr {
 }
 
 .navbar {
-	display: inline-block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .nav.navbar-nav li a {
     color: #AE1818;
+    display: block;
 }
 
 .nav.navbar-nav li a:hover {
-    color: #FFF;
+    color: #999;
+}
+
+.nav ul li {
+text-align: center;
 }
 
 .conteudo {
@@ -536,8 +546,9 @@ button:hover{
 
 /* RODAPE */
 .footer {
+	background: rgba(0, 0, 0, 0.5);
     bottom: 0;
-    height: 70px;
+    height: auto;
     position: absolute;
     width: 100%;
     z-index: 4;
@@ -547,6 +558,7 @@ button:hover{
 	color: white;
 	font-family: 'Source Sans Pro', serif;
 	font-size: 1.5em;
+	padding-top: 28px;
 	text-align: center;
 }
 
@@ -554,12 +566,13 @@ button:hover{
 	color: white;
 	font-family: 'Source Sans Pro', serif;
 	font-size: 1.5em;
+	padding-top: 10px;
 	text-align: center;
 }
 
 .redes-sociais {
 	height: 20px;
-	margin: 5px auto;
+	margin: 10px auto;
 	padding: 0px 0px 0px 22px;
 	position: relative; 
 	width: 150px;
@@ -596,11 +609,6 @@ button:hover{
 	position: relative;
 	z-index: 3;
 }
-
-.em-cima-nav {
-	position: relative;
-}
-
 
 /* CORES */
 .preto {
