@@ -132,7 +132,7 @@ hr {
 }
 
 /* Redução do tamanho da fonte em resoluções menores */
-@media (max-width: 830px) {
+@media (max-width: 1368px) {
 	.titulo-destaque {
 		font-size: 3em;
 	}
